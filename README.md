@@ -1,2 +1,2 @@
 # New-Portfolio
-Made this portfolio from scratch!
+This portfolio website is a custom-built solution, leveraging EJS and Node.js. It features an innovative integration with Google Sheets, enabling real-time content updates and management. Developed from scratch, this website exemplifies the use of modern web technologies to create a dynamic, user-friendly portfolio.
