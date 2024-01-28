@@ -1,0 +1,88 @@
+
+/* Achievemnts */
+
+.achievements-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.achievements-card{
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 10px 1px white;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 20rem;
+    height: 16rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: ease 0.5s;
+}
+.achievements-card-img{
+    position: absolute;
+    border-radius: inherit;
+    width: 90%;
+    height: 200px;
+    overflow: hidden;
+    z-index: 1;
+    transition: ease-in-out 0.5s;
+}
+.achievements-card-img img{
+    width: 100%;
+    height: 200px;
+    transition: ease 0.5s;
+}
+.achievements-card-links{
+    border-radius: inherit;
+    border-top-right-radius:0 ;
+    border-top-left-radius:0 ;
+    position: absolute;
+    background: var(--premiumBlack);
+    width: 90%;
+    height: 3.3rem;
+    z-index: 0;
+    opacity: 0;
+    transition: ease 0.5s;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.achievements-card:hover{
+    transform: translateY(-10px);
+}
+.achievements-card:hover .achievements-card-links{
+    margin-top: 50%;
+    opacity: 1;
+}
+.achievements-card:hover .achievements-card-img{
+    margin-top: -10%;
+    transform: scaleY(0.9);
+}
+.achievements-card:hover .achievements-card-img img{
+    transform: scale(1.09);
+}
+.achievements-card-name{
+    color: var(--fontlight);
+    position: absolute;
+    text-wrap: wrap;
+    width: 50%;
+    margin-right: 45%;
+    margin-bottom: 3%;
+    font-size: 0.8rem;
+}
+
+
+@media only screen and (max-width: 600px)  {
+    .achievements-container{
+        flex-direction: column;
+    }
+}

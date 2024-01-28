@@ -1,0 +1,16 @@
+<%- layout("./layouts/template.ejs") %>
+<h1>Achievements</h1>
+<!-- <img src="https://drive.google.com/uc?export=download?id=1LwEIPoIGL8rb3XUIMV4UVEIhPl9M5ReH" alt=""> -->
+<div class="achievements-container">
+    <% for (let i=1;i<Achievements.length;i++){%>
+        <div class="achievements-card">
+            <div class="achievements-card-img">
+                <img src= <%="https://drive.google.com/thumbnail?id="+ Achievements[i][1]%> alt="">
+            </div>
+            <div class="achievements-card-links">
+                <p class="achievements-card-name"><%=Achievements[i][0]%></p>
+                <a href=<%= Achievements[i][2]%> target="_BLANK" class="link-icon"><i class="fa-solid fa-link"></i></a>
+            </div>
+        </div>
+    <%}%>
+</div>

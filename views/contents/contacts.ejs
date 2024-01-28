@@ -1,0 +1,67 @@
+<%- layout("./layouts/template.ejs") %>
+<div class="contact-container">
+    <h1>Contact Me</h1>
+    <div class="contact-wrapper">
+        
+        <div class="left-contact">
+            
+            <a href="mailto:yashvarma2702@gmail.com" target="_blank">
+                <p style="font-size: 1.1rem; font-weight: 500;">
+                    <i class="fa-solid fa-paper-plane"></i> yashvarma2702@gmail.com
+                </p>
+            </a>
+            <div class="contact_socialLinks">
+                <a href="https://github.com/yashgv" target="_blank">
+                    <div class="social_link">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </a>
+                <a href="https://discord.gg/m7gd3YQuxN" target="_blank" >
+                    <div class="social_link">
+                        <i class="fa-brands fa-discord"></i>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/yashhvarma/" target="_blank">
+                    <div class="social_link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/yashhvarma_/" target="_blank">
+                    <div class="social_link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://twitter.com/_YashVarma_" target="_blank">
+                    <div class="social_link">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </a>
+            </div>
+            <a href="https://drive.google.com/file/d/1PrFYnsg2_LFgl6TNUnPTiTXo4iUSHRrs/view?usp=sharing" target="_blank">
+                <div class="contact_button">
+                    Resume
+                </div>
+            </a>
+        </div>
+        <div class="right-contact">
+            <form method="post" action="/Contacts">
+                <input name="cc[Name]" id="Name"  type="text" placeholder="Your Name" required>
+                
+                <input name="cc[Email]" id="Email" type="email" placeholder="Your Email" required>
+                
+                <textarea name="cc[Message]" id="Message" type="text" placeholder="Your Message"></textarea>
+                <button class="contact_button" type="submit">Get in Touch</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <script>
+    name = document.querySelector("#Name").value
+    email = document.querySelector("#Email").value
+    msg = document.querySelector("#Message").value
+    console.log(name,email,msg)
+    const cc= async () => {
+        await CreateContact(name,email,msg)
+    } 
+</script> -->

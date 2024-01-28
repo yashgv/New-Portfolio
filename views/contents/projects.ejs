@@ -1,0 +1,23 @@
+<%- layout("./layouts/template.ejs") %>
+
+<h1>Projects</h1>
+<div class="projects-container">
+    <% for (let i=1;i<Projects.length;i++){%>
+        <div class="project-card">
+            <div class="project-card-img">
+                <img src=<%= Projects[i][2]%> alt="">
+                <div class="project-card-links">
+                    <p class="project-card-name"><%=Projects[i][0]%></p>
+                    <a href=<%=Projects[i][3]%> target="_BLANK"><i class="fa-brands fa-github"></i></a>
+                    <a href=<%=Projects[i][4]%> target="_BLANK" class="link-icon"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project-card-tech">
+                <% skills= Projects[i][1].split(", ");%>
+                <%for(skill of skills){%>
+                    <img src=<%="./assets/skills/"+skill+".png"%> alt="">
+                <%}%>
+            </div>
+        </div>
+    <%}%>
+</div>

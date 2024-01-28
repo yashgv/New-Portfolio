@@ -1,0 +1,97 @@
+
+/* Home */
+
+.home-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+.profile{
+    position: relative;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.profile_cover{
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.profile_cover img{
+    width: 100%;
+    height: auto;
+}
+.profile_img{
+    position: absolute;
+    margin: -5rem 0 0 1rem;
+    border: 2px solid white;
+    box-shadow: 0 0 2px 1px white;
+    width: 10rem;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile_img img{
+    width: 100%;
+    height: auto;
+}
+.profile_greetings{
+    margin-left: 15rem;
+    font-size: 1rem;
+}
+#Writer{
+    width: 50%;
+    font-weight: 600;
+}
+.home_music{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.home_spotify{
+    flex: 1;
+}
+
+/* .home_illustration img{
+    width: 20rem;
+    height: auto;
+} */
+
+@media only screen and (max-width: 600px)  {
+    .profile{
+        margin-top: 1.2rem;
+    }
+    .profile_img{
+        margin: -2rem 0 0 1rem;
+        width: 6rem;
+    }
+    .profile_cover img{
+        margin-right: -2rem;
+        width: 180%;
+    }
+    .profile_greetings{
+        margin-left: 1rem;
+        margin-top: 5rem;
+        font-size: 0.8rem;
+    }
+    .home_music{
+        flex-direction: column;
+    }
+}

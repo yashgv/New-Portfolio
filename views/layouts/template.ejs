@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Varma</title>
+    <link rel="stylesheet" href="./css/globals.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/achievements.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="shortcut icon"  href="./assets/Headlogo.png">
+</head>
+<body >
+    <%- include("../includes/navbar.ejs") %>
+    <div class="bg-MainWrapper">
+        <div class="bg-imgWrapper">
+        </div>
+        <div class="bg-glass">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="Wrapper">
+            <%- body %>
+        </div>
+    </div>
+    <div class="home-3dcontainer" >
+        <model-viewer src="./assets/gaming_desktop_pc/scene.gltf" alt="model" skybox-image="/assets/skybox.jpeg" disable-zoom disable-tap camera-orbit="90deg 80deg 1m" camera-controls title="sketchfab.com" ></model-viewer>
+        <div class="home-arrow" id="arrow" onclick="scrollUp()" title="Desktop Setup">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
+    </div>
+    <%- include("../includes/footer.ejs") %>
+
+
+
+    
+    <script>
+        var path = window.location.pathname
+        var MVcontainer = document.querySelector(".home-3dcontainer");
+        var arrow = document.querySelector(".home-arrow");
+        var content = document.querySelector(".Wrapper");
+        if(path == "/Home" || path == "/"){
+            MVcontainer.style.display = "block"
+            // arrow.style.display = "block"
+        }
+    </script>
+    <script>
+        var setup=document.querySelector(".home-3dcontainer");
+        var arrow=document.querySelector("#arrow");
+        flag=[false];
+        function scrollUp(){
+            if(flag[0]==true){
+                setup.style.top = "-100vh";
+                arrow.style.bottom = "-4rem";
+                arrow.style.transform = 'rotate(0deg)';
+                content.style.display = "block",1000
+                flag[0]=false;
+            }
+            else if(flag[0]==false){    
+                setup.style.top = "0";
+                arrow.style.bottom  = "4rem";
+                arrow.style.transform = 'rotate(180deg)';
+                setTimeout(() => content.style.display = "none",1000)
+                flag[0]=true;
+            }
+        }
+    </script>
+</body>
+</html>

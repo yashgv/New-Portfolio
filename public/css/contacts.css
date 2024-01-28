@@ -1,0 +1,120 @@
+
+/* Contacts */
+
+.contact-container{
+    width: calc(100% - 6rem);
+    height: fit-content;
+    padding: 3rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0 0 5px 1px white;
+    background: rgba(255,255,255,0.5);
+}
+.contact-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.contact-container i{
+    font-size: 1.5rem;
+}
+.contact-container a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.left-contact{
+    flex-basis: 40;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start ;
+}
+.right-contact{
+    flex-basis: 60%;
+}
+.right-contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.right-contact input,textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background:  rgba(0,0,0,0.8) !important;
+    border: 1px solid black ;
+    padding: 15px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 6px;
+    resize: none;
+}
+input:focus,textarea:focus{
+    border: 2px solid white;
+}
+
+.contact_socialLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+
+}
+.social_link{
+    color: white;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: ease 0.5s;
+}
+.social_link:hover{
+    transform: translateY(-5px);
+}
+
+
+button{
+    all: unset;
+}
+.contact_button{
+    font-size: 1rem;
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px black;
+    width: fit-content;
+    padding: 0.7rem 1rem;
+    transition: ease 0.5s;
+}
+
+.contact_button:hover{
+    background: black ;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .contact-wrapper{
+        flex-direction: column;
+        margin-left:-1rem;
+    }
+    .contact_button{
+        background: black;
+        color: white;
+    }
+}
