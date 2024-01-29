@@ -34,7 +34,8 @@ app.get("/Achievements",async (req,res) => {
 
 app.get("/Contacts",async (req,res) => {
     res.render("./contents/contacts.ejs");
-})
+})  
+
 
 app.post("/Contacts",async (req,res) =>{
     const contact = req.body.cc;
