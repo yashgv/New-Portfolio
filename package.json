@@ -2,13 +2,13 @@
   "name": "yashvarma",
   "version": "1.0.0",
   "description": "My Portfolio",
-  "main": "App.js",
+  "main": "index.js",
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node App.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
