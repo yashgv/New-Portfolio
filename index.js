@@ -44,8 +44,6 @@ app.post("/Contacts",async (req,res) =>{
     res.redirect("/Contacts")
 })
 
-const port = "yashhvarma.vercel.app";
-
-app.listen(port,(req,res)=> {
+app.listen(8080,(req,res)=> {
     console.log("Yes Listening!");
 })
