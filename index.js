@@ -8,7 +8,7 @@ const db = require("./init/db.js");
 
 app.engine("ejs",ejsMate);
 app.set("view engine","ejs");
-app.use(express.static(path.join(__dirname,"./public/")));
+app.use(express.static(path.join(__dirname,"./bucket/")));
 // app.use(express.static(__dirname+"./views/contents/Home"));
 
 app.use(express.urlencoded({ extended: true }));
