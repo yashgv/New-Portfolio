@@ -14,11 +14,11 @@ app.use(express.static(path.join(__dirname,"./bucket/")));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/",async (req,res) => {
-    res.render("./components/home.ejs");
+    res.render("../components/home.ejs");
 })
 
 app.get("/Home",async (req,res) => {
-    res.render("./components/home.ejs");
+    res.render("../components/home.ejs");
 })
 app.get("/Projects",async (req,res) => {
     const data = await db();
