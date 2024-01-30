@@ -1,4 +1,7 @@
 const {google} = require("googleapis");
+const keyFile = require("./credentials.json");
+
+console.log(keyFile)
 
 module.exports = async () => {
     const auth = new google.auth.GoogleAuth({
