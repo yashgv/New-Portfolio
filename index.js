@@ -8,17 +8,17 @@ const db = require("./init/db.js");
 
 app.engine("ejs",ejsMate);
 app.set("view engine","ejs");
-app.use(express.static(path.join(__dirname,"./bucket/")));
+app.use(express.static(path.join(__dirname,"./views/")));
 // app.use(express.static(__dirname+"./views/components/Home"));
 
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/",async (req,res) => {
-    res.render("../components/home.ejs");
+    res.render("./components/home.ejs");
 })
 
 app.get("/Home",async (req,res) => {
-    res.render("../components/home.ejs");
+    res.render("./components/home.ejs");
 })
 app.get("/Projects",async (req,res) => {
     const data = await db();
