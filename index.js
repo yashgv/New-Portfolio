@@ -20,7 +20,7 @@ app.get("/",async (req,res) => {
 app.get("/Home",async (req,res) => {
     res.render("./components/home.ejs");
 })
-app.get("/Projects",async (req,res) => {
+app.get("/Projects",async (req,res) => { 
     const data = await db();
     const Projects = data.Projects;
     res.render("./components/projects.ejs",{Projects});
