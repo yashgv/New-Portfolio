@@ -22,8 +22,12 @@ app.get("/Home",async (req,res) => {
     res.render("./components/home.ejs");
 })
 app.get("/Projects",async (req,res) => { 
-    const data = await db();
-    const Projects = data.Projects;
+    try {
+        const data = await db();
+        const Projects = data.Projects;
+    } catch (error) {
+        console.log(error)
+    }
     res.render("./components/projects.ejs",{Projects});
 })
 
