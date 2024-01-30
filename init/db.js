@@ -1,8 +1,9 @@
 const {google} = require("googleapis");
+const keyFile = require("./credentials.json");
 
 module.exports = async () => {
     const auth = new google.auth.GoogleAuth({
-        keyFile: "./init/credentials.json",
+        keyFile,
         scopes: "https://www.googleapis.com/auth/spreadsheets",
     });
     
