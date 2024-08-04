@@ -31,6 +31,18 @@
     width: 100%;
     height: auto;
 }
+.profile_links{
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    margin: 5px 5px 0 78%;
+    justify-content: center;
+    align-items: center;
+}
+.profile_links svg{
+    width: 100%;
+    height: auto;
+}
 .profile_img{
     position: absolute;
     margin: -5rem 0 0 1rem;
@@ -49,9 +61,28 @@
     height: auto;
 }
 .profile_greetings{
-    margin-left: 15rem;
+    margin-left: 13rem;
     font-size: 1rem;
 }
+.profile_contents{
+    margin: 3rem;
+}
+.profile_content h2{
+    font-weight: 600;
+}
+.profile_skills{
+    
+}
+.tech_skills{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+    margin: 0 1.6rem;
+}
+
 #Writer{
     width: 50%;
     font-weight: 600;
@@ -65,6 +96,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .home_spotify{
     flex: 1;
 }
@@ -74,9 +106,42 @@
     height: auto;
 } */
 
+#Writer{
+    width: 50%;
+    font-weight: 600;
+}
+
+.profile_experience{
+    margin-top: 2rem;
+}
+
+.experience_block{
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+
+}
+
+.experience_block img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 @media only screen and (max-width: 600px)  {
     .profile{
         margin-top: 1.2rem;
+    }
+    .profile_links{
+        margin: 5px 5px 0 55%;
+        gap: 2px;
+    }
+    .profile_links svg{
+        width: 1.5rem;
     }
     .profile_img{
         margin: -2rem 0 0 1rem;
@@ -87,11 +152,81 @@
         width: 180%;
     }
     .profile_greetings{
+        text-wrap: wrap;
         margin-left: 1rem;
+        margin-right: 1rem;
         margin-top: 5rem;
         font-size: 0.8rem;
     }
+    .profile_contents{
+        margin: 1rem;
+    }
+    .tech_skills{
+        margin: 0.8rem;
+    }
+
     .home_music{
         flex-direction: column;
     }
+}
+
+
+
+.experience-section {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0;
+    padding: 20px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.experience-logo {
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+.experience-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.experience-company {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.experience-duration {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+}
+
+.experience-details {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.experience-skills {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #0066cc;
 }
