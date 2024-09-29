@@ -3,9 +3,10 @@
 <!-- <img src="https://drive.google.com/uc?export=download?id=1LwEIPoIGL8rb3XUIMV4UVEIhPl9M5ReH" alt=""> -->
 <div class="achievements-container">
     <% for (let i=1;i<Achievements.length;i++){%>
+        <%let link = "https://drive.google.com/file/d/"+ Achievements[i][1]+"/preview"%>
         <div class="achievements-card">
             <div class="achievements-card-img">
-                <img src= <%="https://drive.google.com/thumbnail?id="+ Achievements[i][1]%> alt="">
+                <iframe src=<%= "https://drive.google.com/file/d/"+ Achievements[i][1]+"/preview" %> frameborder="0" scrolling="no" seamless="" ></iframe>
             </div>
             <div class="achievements-card-links">
                 <p class="achievements-card-name"><%=Achievements[i][0]%></p>

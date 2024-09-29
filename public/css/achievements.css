@@ -35,9 +35,11 @@
     z-index: 1;
     transition: ease-in-out 0.5s;
 }
-.achievements-card-img img{
+.achievements-card-img iframe{
     width: 100%;
     height: 200px;
+    outline: none;
+    border: none;
     transition: ease 0.5s;
 }
 .achievements-card-links{

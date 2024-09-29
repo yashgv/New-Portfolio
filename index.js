@@ -32,6 +32,9 @@ app.get("/Achievements",async (req,res) => {
     const Achievements = data.Achievements;
     res.render("./components/achievements.ejs",{Achievements});
 })
+app.get("/Blogs",async (req,res) => {
+    res.render("./components/blogs.ejs");
+})
 
 app.get("/Contacts",async (req,res) => {
     res.render("./components/contacts.ejs");
