@@ -18,10 +18,19 @@
 <body >
     <%- include("../includes/navbar.ejs") %>
     <div class="bg-MainWrapper">
-        <div class="bg-imgWrapper">
-        </div>
-        <div class="bg-glass">
-        </div>
+        <% if(Themed==false){%>
+            <div class="bg-imgWrapper">
+            </div>
+            <div class="bg-glass">
+            </div>
+        <% }else{ %>
+            <div class="bg-imgWrapper-themed">
+                <video autoplay muted loop src="./assets/themed_bg.mp4"></video>
+            </div>
+            <div class="bg-glass">
+            </div>
+        <% }%>
+        
     </div>
     
     <div class="container">
